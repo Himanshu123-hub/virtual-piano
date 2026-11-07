@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #20242c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Piano */
+
+#piano {
+    width: 95%;
+    padding: 30px 40px;
+    background-color: #171717;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(109, 218, 254, 0.875);
+}
+
+/* Heading */
+
+h1 {
+    color: white;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+/* All Piano Keys */
+
+#keys {
+    display: flex;
+    gap: 2px;
+    width: 100%;
+    background-color: #38a3ff;
+    padding: 0px 40px 40px 40px;
+    border-radius: 10px;
+}
+
+/* Individual Key */
+
+.key {
+    flex: 1;
+    height: 280px;
+    background-color: white;
+    border: 1px solid #222;
+    border-radius: 0 0 8px 8px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #222;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+/* Hover Effect */
+
+.key:hover {
+    background-color: #aaa6a6;
+}
+
+/* Click Effect */
+
+.key:active {
+    background-color: #616060;
+    transform: scaleY(0.97);
+    box-shadow: 0 2px 0 #0369a1;
+}
+
+
+.key.active {
+    background-color:  #616060;
+    color: white;
+    transform: translateY(5px);
+    box-shadow: 0 2px 0 #0369a1;
+}
+/* Mobile Screen */
+
+@media (max-width: 700px) {
+    #piano {
+        width: 98%;
+        padding: 15px 8px;
+    }
+
+    #keys {
+        gap: 2px;
+    }
+
+    .key {
+        height: 200px;
+        font-size: 13px;
+        min-width: 0;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
+
